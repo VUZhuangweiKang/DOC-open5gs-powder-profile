@@ -1,0 +1,13 @@
+#!/bin/bash
+
+NUM_UE_=?
+
+# this is a temporary setback based on how UEs configs are generated. It can be removed with more scripting work
+if [ "$NUM_UE_" -gt 10 ]; then
+    echo "Error: The maximum number of UEs is 10"
+    exit -1
+fi 
+if [ "$NUM_UE_" -lt 0 ]; then
+    echo "Error: The minimum number of UEs is 0"
+    exit -1
+fi 
