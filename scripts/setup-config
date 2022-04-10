@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUM_UE_=?
+NUM_UE_=512
 
 # this is a temporary setback based on how UEs configs are generated. It can be removed with more scripting work
 if [ "$NUM_UE_" -gt 512 ]; then
