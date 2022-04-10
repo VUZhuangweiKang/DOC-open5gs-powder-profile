@@ -3,8 +3,8 @@
 NUM_UE_=?
 
 # this is a temporary setback based on how UEs configs are generated. It can be removed with more scripting work
-if [ "$NUM_UE_" -gt 10 ]; then
-    echo "Error: The maximum number of UEs is 10"
+if [ "$NUM_UE_" -gt 512 ]; then
+    echo "Error: The maximum number of UEs is 512"
     exit -1
 fi 
 if [ "$NUM_UE_" -lt 0 ]; then

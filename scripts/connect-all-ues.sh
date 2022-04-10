@@ -10,8 +10,10 @@ pkill -f nr-ue
 cd /root/UERANSIM
 logdir=uelog
 mkdir -p $logdir
-upper=$(($NUM_UE_ - 1))
-for i in $(seq 0 $upper); do
+
+lower=$1
+upper=$2
+for i in $(seq $lower $upper); do
     file=ue"$i.yaml"                             
     build/nr-ue -c config/open5gs-ue/ue$i.yaml > $logdir/ue$i.log 2>&1 &
     echo started ue$i

@@ -43,16 +43,6 @@ replace_in_file() {
 cd ~/UERANSIM/config/open5gs-ue
 # autogenerate config files for each ue
 upper=$(($NUM_UE_ - 1))
-# for i in $(seq 0 $upper); do
-#     file=ue"$i.yaml"
-#     defaultkey="465B5CE8B199B49FAA5F0A2EE238A6BC"
-#     newkey=$(printf "%0.s$i" {1..32})
-#     cp ue-default.yaml $file
-#     replace_in_file $defaultkey $newkey $file
-#     defaultimsi="imsi-901700000000001"
-#     newimsi="imsi-90170000000000$i"
-#     replace_in_file $defaultimsi $newimsi $file
-# done
 
 i=0
 while IFS= read -r newkey; do
@@ -69,6 +59,7 @@ while IFS= read -r newkey; do
     if [ "$i" -gt $upper ]; then
       break
     fi
+    i=$((i+1))
 done < /local/repository/scripts/keys.txt   
 
 
