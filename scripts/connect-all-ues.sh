@@ -22,8 +22,7 @@ done
 sleep 1
 
 # for each ue, check for connectivity
-upper=$(($NUM_UE_ - 1))
-for i in $(seq 0 $upper); do
+for i in $(seq $lower $upper); do
     iface=$(grep 'Connection setup for PDU session' $logdir/ue$i.log | grep -Eo 'uesimtun[0-9]*')
     if [[ $iface == "" ]]; then
         echo "No PDU session interface found for ue$i"
