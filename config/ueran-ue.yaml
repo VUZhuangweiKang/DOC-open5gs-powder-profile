@@ -22,13 +22,26 @@ imeiSv: '4370816125816151'
 gnbSearchList:
   - 10.10.1.1
 
+# UAC Access Identities Configuration
+uacAic:
+  mps: false
+  mcs: false
+
+# UAC Access Control Class
+uacAcc:
+  normalClass: 0
+  class11: false
+  class12: false
+  class13: false
+  class14: false
+  class15: false
+
 # Initial PDU sessions to be established
 sessions:
   - type: 'IPv4'
     apn: 'internet'
     slice:
       sst: 1
-    emergency: false
 
 # Configured NSSAI for this UE by HPLMN
 configured-nssai:
@@ -37,6 +50,7 @@ configured-nssai:
 # Default Configured NSSAI for this UE
 default-nssai:
   - sst: 1
+    sd: 1
 
 # Supported encryption algorithms by this UE
 integrity:

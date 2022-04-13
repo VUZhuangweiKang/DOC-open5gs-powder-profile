@@ -27,7 +27,7 @@ sudo snap install cmake --classic
 
 echo "3. Clone UERANSIM."
 cd ~
-git clone --depth 1 --branch v3.2.0 https://github.com/aligungr/UERANSIM.git
+git clone --depth 1 --branch v3.2.6 https://github.com/aligungr/UERANSIM.git
 
 echo "4. Change configs"
 cp /local/repository/config/ueran-profile.yaml ~/UERANSIM/config/profile.yaml

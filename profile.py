@@ -73,7 +73,7 @@ pc.defineParameter("uenum","Number of simulated UEs to generate and register (0-
                    portal.ParameterType.INTEGER, 1, min=0, max=10)
 
 pc.defineParameter("ueransim_branchtag","Which tag/branch of UERANSIM to install",
-                   portal.ParameterType.STRING, "v3.2.0")
+                   portal.ParameterType.STRING, "v3.2.6")
 
 
 # Retrieve the values the user specifies during instantiation.
